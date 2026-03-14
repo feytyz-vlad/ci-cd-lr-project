@@ -77,4 +77,4 @@ export default defineConfig([
 ## Latest Release Info
 - Version: v1.0.1
 - PR Title: CI/CD example
-- Chuck Norris Joke: Simply by visiting this website, Chuck Norris now knows your full name, address, occupation, what you look like and how often you masturbate.
+- Chuck Norris Joke: Simply by visiting this website, Chuck Norris now knows your full name, address, occupation, what you look like and how often you smile.
