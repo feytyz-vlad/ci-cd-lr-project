@@ -1,4 +1,7 @@
 ## Latest Release Info
+- Version: v1.0.4-1
+- Chuck Norris Joke: Chuck Norris doesn't cut the grass, he dares it to grow
+## Latest Release Info
 - Version: v1.0.3
 - Chuck Norris Joke: Chuck Norris didn't do anything for a klondike bar, and he still got one.
 # React + TypeScript + Vite
