@@ -20,7 +20,7 @@ jobs:
 
       - name: Version
         id: version
-        run: echo "VERSION=v1.0.${{ github.run_number }}" >> $GITHUB_OUTPUT
+        run: echo "VERSION=v1.0.${{ github.run_number }}-${{ github.run_attempt }}" >> $GITHUB_OUTPUT
 
       - name: Joke
         id: joke
