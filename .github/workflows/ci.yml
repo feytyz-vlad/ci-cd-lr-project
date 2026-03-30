@@ -1,25 +1,38 @@
-name: CI
+name: CI - Code Verification
 
 on:
   push:
+    branches: [ main ]
   pull_request:
+    branches: [ main ]
 
 jobs:
-  ci:
+  verify:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      # Крок 1: Клонуємо репозиторій
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      # Крок 2: Встановлюємо Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          cache: 'npm'
 
-      - run: npm ci
+      # Крок 3: Встановлюємо залежності
+      - name: Install dependencies
+        run: npm ci
 
-      - run: npm run lint
+      # Крок 4: Запускаємо лінтер
+      - name: Run lint
+        run: npm run lint
 
-      - run: npm run test
+      # Крок 5: Запускаємо тести (використовуємо --run для vitest, щоб він завершився після виконання)
+      - name: Run tests
+        run: npm test -- --run
 
-      - run: npm run build
+      # Крок 6: Перевіряємо білд проекту
+      - name: Run build
+        run: npm run build
